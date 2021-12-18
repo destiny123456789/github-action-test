@@ -16,6 +16,12 @@ jobs:
          run: |
            pwd
            ls -a
+           echo $GITHUB_SHA
+           echo $GITHUB_WORKSAPCE
+           echo $GITHUB_REPOSITORY
+           echo "{{ github.token}}"
+           git clone git@github:@GITHUB_REPOSITORY
+           git checkout $GITHUB_SHA
 
        - name: simple JS Action
          id: greet
