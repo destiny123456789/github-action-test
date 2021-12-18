@@ -13,3 +13,9 @@ jobs:
         run : |
           java -version
           sbt version
+
+      - name: python commands
+        run: |
+           import platform
+           print(platform.processor())
+        shell: python
