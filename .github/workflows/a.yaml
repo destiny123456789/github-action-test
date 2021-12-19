@@ -1,6 +1,6 @@
 name: uses commands
 
-on: [push]
+on: [push,pull_request]
 jobs:
    run-github-action:
      runs-on: ubuntu-latest

@@ -1,0 +1,19 @@
+name: uses commands
+
+on: [push]
+
+jobs:
+   uses-command-demo:
+     runs-on: ubuntu-latest
+     steps:  
+       - name: simple JS Action
+         id: greet
+         uses: actions/hello-world-javascript-action@v2
+         with: 
+          who-to-greet: 'Mona the Octocat'
+
+       - name: log greeting time
+         run: echo "{{  steps.greet.outputs.time }}"
+
+
+  
