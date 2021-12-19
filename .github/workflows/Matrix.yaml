@@ -8,15 +8,15 @@ jobs:
       strategy:
         matrix: 
           os: [windows-latest, ubuntu-latest, macos-latest]
-          java-version: [7, 8, 13]
-        fail-fast: true
+          java-version: [6,7, 8]
+        fail-fast: false
       runs-on: ${{ matrix.os}}
       steps:
         - name: node version
           run: |
             java -version
           
-        - name: Install New node version
+        - name: Install New java version
           uses: actions/checkout@v2
 
         - name: setupjava
