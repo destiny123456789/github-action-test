@@ -22,7 +22,7 @@ jobs:
         - name: setupjava
           uses: actions/setup-java@v2
           with:
-            #distribution: 'zulu' # See 'Supported distributions' for available options
+            distribution: 'zulu' # See 'Supported distributions' for available options
             java-version: ${{ matrix.java-version  }}
 
         - name : Check java version
