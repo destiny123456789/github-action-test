@@ -1,0 +1,13 @@
+name: Container-demo
+
+on: push
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    container:
+      image: java:latest
+    steps:
+    - name: Log java version
+      run: | 
+        java -version
