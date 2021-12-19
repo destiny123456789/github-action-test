@@ -13,12 +13,13 @@ jobs:
         - name: Install New node version
           uses: actions/checkout@v2
 
-        - name: setupnode
+        - name: setupjava
           uses: actions/setup-java@v2
           with:
-            java-version: 11
+            distribution: 'zulu' # See 'Supported distributions' for available options
+            java-version: '11'
 
-        - name : Check node version
+        - name : Check java version
           run: |
             java -version
 
