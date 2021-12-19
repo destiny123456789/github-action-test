@@ -4,11 +4,13 @@ on: push
 
 jobs:
    Matrix-Demo:
-      runs-on: ubuntu-latest
+      
       strategy:
         matrix: 
-           java-version: [7, 8, 13]
+          os: [windows-latest, ubuntu-latest, macos-latest]
+          java-version: [7, 8, 13]
         fail-fast: true
+      runs-on: ${{ matrix.os}}
       steps:
         - name: node version
           run: |
